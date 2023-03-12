@@ -40,16 +40,16 @@ string Toys::getCountryProducer()
 
 istream& operator >> (istream& in, Toys& obj)
 {
-    cout << "\tÂâåäèòå" << endl << endl << "Íàçâàíèå:" << endl;
+    cout << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ" << endl << endl << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ:" << endl;
     validationCheckStr(in, obj.name);
     //in >> obj.name;
-    cout << "Öåíà:" << endl;
+    cout << "Ð¦ÐµÐ½Ð°:" << endl;
     validationCheckField(in, obj.price);
     //in >> obj.price;
-    cout << "Âîçðàñòíàÿ ãðóïïà:" << endl;
+    cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°:" << endl;
     validationCheckField(in, obj.age_group);
     //in >> obj.age_group;
-    cout << "Ñòðàíà ïðîèçâîäèòåëü:" << endl;
+    cout << "Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ:" << endl;
     validationCheckStr(in, obj.country_producer);
     //in >> obj.country_producer;
     return in;
@@ -62,7 +62,7 @@ ostream& operator << (ostream& out, Toys& obj)
 }
 
 ifstream& operator >> (ifstream& fin, Toys& obj)
-{    
+{
     fin >> obj.name >> obj.price >> obj.age_group >> obj.country_producer;
     return fin;
 }

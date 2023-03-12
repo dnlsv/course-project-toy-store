@@ -1,30 +1,31 @@
 #pragma once
+
 #include "SimpleToys.h"
 
 const string CONSTRUCTORS = "Constructors";
-const string MODYL_OF_CONSTRUCTORS = "\tКОНСТРУКТОРЫ";
+const string MODYL_OF_CONSTRUCTORS = "\tРљРћРќРЎРўР РЈРљРўРћР Р«";
 
 class Constructors :public SimpleToys
 {
 private:
-    string brand; //бренд
-    int number_of_details; //количество деталей
+    string brand; //Р±СЂРµРЅРґ
+    int number_of_details; //РєРѕР»РёС‡РµСЃС‚РІРѕ РґРµС‚Р°Р»РµР№
 public:
-    Constructors(); //конструктор без параметров
-    ~Constructors() {}; //деструктор без параметров
-    Constructors(const Constructors& ob); //конструктор копирования
-    void setBrand(string buf); //метод, устанавливающий значение поля brand
-    string getBrand(); //метод, возвращающий значение поля brand
-    void setNumberOfDetails(int buf); //метод, устанавливающий значение поля number_of_details
-    int getNumberOfDetails(); //метод, возвращающий значение поля number_of_details
-    friend istream& operator >> (istream& in, Constructors& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, Constructors& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, Constructors& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, Constructors& obj); //перегрузка оператора вывода для файла
-    void edit(); //редактирование всех полей объекта
-    bool search(Constructors&, int num); //поиск по полям объекта
-    Constructors& inputSearchField(int& num); //ввод поля для поиска
-    void tableCap(); //вывод на экран шапки таблицы
-    static string getNameOfClass(); //метод, возвращающий имя класса
-    static string getNameOfMenu(); //метод, возвращающий название меню
+    Constructors(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~Constructors() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    Constructors(const Constructors& ob); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+    void setBrand(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ brand
+    string getBrand(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ brand
+    void setNumberOfDetails(int buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ number_of_details
+    int getNumberOfDetails(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ number_of_details
+    friend istream& operator >> (istream& in, Constructors& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, Constructors& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, Constructors& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, Constructors& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    void edit(); //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІСЃРµС… РїРѕР»РµР№ РѕР±СЉРµРєС‚Р°
+    bool search(Constructors&, int num); //РїРѕРёСЃРє РїРѕ РїРѕР»СЏРј РѕР±СЉРµРєС‚Р°
+    Constructors& inputSearchField(int& num); //РІРІРѕРґ РїРѕР»СЏ РґР»СЏ РїРѕРёСЃРєР°
+    void tableCap(); //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ С€Р°РїРєРё С‚Р°Р±Р»РёС†С‹
+    static string getNameOfClass(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РёРјСЏ РєР»Р°СЃСЃР°
+    static string getNameOfMenu(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅР°Р·РІР°РЅРёРµ РјРµРЅСЋ
 };

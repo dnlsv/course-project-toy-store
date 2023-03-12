@@ -41,10 +41,10 @@ int Constructors::getNumberOfDetails()
 istream& operator >> (istream& in, Constructors& obj)
 {
     in >> dynamic_cast<SimpleToys&>(obj);
-    cout << "Áðåíä:" << endl;
+    cout << "Ð‘Ñ€ÐµÐ½Ð´:" << endl;
     validationCheckStr(in, obj.brand);
     //in >> obj.brand;
-    cout << "Êîëè÷åñòâî äåòàëåé:" << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÑ‚Ð°Ð»ÐµÐ¹:" << endl;
     validationCheckField(in, obj.number_of_details);
     //in >> obj.number_of_details;
     return in;
@@ -53,7 +53,7 @@ istream& operator >> (istream& in, Constructors& obj)
 ostream& operator << (ostream& out, Constructors& obj)
 {
     out << dynamic_cast <SimpleToys&>(obj);
-    out << setw(12)  << obj.brand << "|" <<  setw(21) << obj.number_of_details << endl;
+    out << setw(12) << obj.brand << "|" << setw(21) << obj.number_of_details << endl;
     return out;
 }
 
@@ -74,10 +74,10 @@ ofstream& operator << (ofstream& fout, Constructors& obj)
 void Constructors::edit()
 {
     int num;
-    cout << endl << "\tÊàêèå äàííûå èçìåíèòü?" << endl << endl << "1 - Íàçâàíèå" << endl << "2 - Öåíà" << endl << "3 - Âîçðàñòíàÿ ãðóïïà" << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl
-        << "5 - Ìàòåðèàë" << endl << "6 - Íàçíà÷åíèå" << endl << "7 - Áðåíä" << endl << "8 - Êîëè÷åñòâî äåòàëåé" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "2 - Ð¦ÐµÐ½Ð°" << endl << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl
+        << "5 - ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»" << endl << "6 - ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ" << endl << "7 - Ð‘Ñ€ÐµÐ½Ð´" << endl << "8 - ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÑ‚Ð°Ð»ÐµÐ¹" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå íîâûå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -109,11 +109,11 @@ void Constructors::edit()
 
 Constructors& Constructors::inputSearchField(int& num)
 {
-    cout << endl << "\tÊàêèå äàííûå íàéòè?" << endl << endl << "1 - Íàçâàíèå" << endl << "2 - Öåíà" << endl
-        << "3 - Âîçðàñòíàÿ ãðóïïà" << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl << "5 - Ìàòåðèàë" << endl 
-        << "6 - Íàçíà÷åíèå" << endl << "7 - Áðåíä" << endl << "8 - Êîëè÷åñòâî äåòàëåé" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð½Ð°Ð¹Ñ‚Ð¸?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "2 - Ð¦ÐµÐ½Ð°" << endl
+        << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl << "5 - ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»" << endl
+        << "6 - ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ" << endl << "7 - Ð‘Ñ€ÐµÐ½Ð´" << endl << "8 - ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÑ‚Ð°Ð»ÐµÐ¹" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -194,9 +194,9 @@ bool Constructors::search(Constructors& tmp, int num)
 
 void Constructors::tableCap()
 {
-    cout << endl << setw(3) << left << " ¹" << "|" << setw(11) << "Íàçâàíèå" << "|" << setw(8) << "Öåíà" << "|" << setw(20) << "Âîçðàñòíàÿ ãðóïïà" << "|"
-        << setw(23) << "Ñòðàíà ïðîèçâîäèòåëü" << "|" << setw(11) << "Ìàòåðèàë" << "|" << setw(13) << "Íàçíà÷åíèå" << "|" 
-        << setw(12) << "Áðåíä" << "|" << setw(21) << "Êîëè÷åñòâî äåòàëåé" << endl;
+    cout << endl << setw(3) << left << " â„–" << "|" << setw(11) << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << "|" << setw(8) << "Ð¦ÐµÐ½Ð°" << "|" << setw(20) << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << "|"
+        << setw(23) << "Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << "|" << setw(11) << "ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»" << "|" << setw(13) << "ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ" << "|"
+        << setw(12) << "Ð‘Ñ€ÐµÐ½Ð´" << "|" << setw(21) << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÑ‚Ð°Ð»ÐµÐ¹" << endl;
     cout << "-----------------------------------------------------------------------------------------------------------------------" << endl;
 }
 
@@ -209,4 +209,3 @@ string Constructors::getNameOfMenu()
 {
     return MODYL_OF_CONSTRUCTORS;
 }
-

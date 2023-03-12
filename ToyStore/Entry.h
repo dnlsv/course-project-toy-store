@@ -1,15 +1,17 @@
 #pragma once
-#include "Users.h"
+
 #include <conio.h>
 
+#include "Users.h"
+
 const string KEYWORD = "admin";
-const int RESERVESIZE = 256;
+const int RESERVED_SIZE = 256;
 
 class Entry
 {
 public:
-    void authorization(); //авторизация пользователя (админитсратор или обычный пользователь)
-    void registration(); //регистрация пользователя
-    void firstAdmin(); //метод создающий первую учетную запись администратора, если такая отсутствует 
+    void authorization(); //Р°РІС‚РѕСЂРёР·Р°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РґРјРёРЅРёС‚СЃСЂР°С‚РѕСЂ РёР»Рё РѕР±С‹С‡РЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ)
+    void registration(); //СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+    void firstAdmin(); //РјРµС‚РѕРґ СЃРѕР·РґР°СЋС‰РёР№ РїРµСЂРІСѓСЋ СѓС‡РµС‚РЅСѓСЋ Р·Р°РїРёСЃСЊ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°, РµСЃР»Рё С‚Р°РєР°СЏ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ 
     string maskingPassword();
 };

@@ -1,6 +1,6 @@
 #include "SoftToys.h"
 
-SoftToys::SoftToys() 
+SoftToys::SoftToys()
 {
     form = "";
     color = "";
@@ -41,10 +41,10 @@ string SoftToys::getColor()
 istream& operator >> (istream& in, SoftToys& obj)
 {
     in >> dynamic_cast<SimpleToys&>(obj);
-    cout << "Ôîðìà:" << endl;
+    cout << "Ð¤Ð¾Ñ€Ð¼Ð°:" << endl;
     validationCheckStr(in, obj.form);
     //in >> obj.form;
-    cout << "Öâåò:" << endl;
+    cout << "Ð¦Ð²ÐµÑ‚:" << endl;
     validationCheckStr(in, obj.color);
     //in >> obj.color;
     return in;
@@ -74,11 +74,11 @@ ofstream& operator << (ofstream& fout, SoftToys& obj)
 void SoftToys::edit()
 {
     int num;
-    cout << endl << "\tÊàêèå äàííûå èçìåíèòü?" << endl << endl << "1 - Íàçâàíèå" << endl 
-        << "2 - Öåíà" << endl << "3 - Âîçðàñòíàÿ ãðóïïà" << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl << "5 - Ìàòåðèàë"
-        << endl << "6 - Íàçíà÷åíèå" << endl << "7 - Ôîðìà" << endl << "8 - Öâåò" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl
+        << "2 - Ð¦ÐµÐ½Ð°" << endl << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl << "5 - ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»"
+        << endl << "6 - ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ" << endl << "7 - Ð¤Ð¾Ñ€Ð¼Ð°" << endl << "8 - Ð¦Ð²ÐµÑ‚" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå íîâûå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -110,11 +110,11 @@ void SoftToys::edit()
 
 SoftToys& SoftToys::inputSearchField(int& num)
 {
-    cout << endl << "\tÊàêèå äàííûå íàéòè?" << endl << endl << "1 - Íàçâàíèå" << endl << "2 - Öåíà" << endl
-        << "3 - Âîçðàñòíàÿ ãðóïïà" << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl << "5 - Ìàòåðèàë"
-        << endl << "6 - Íàçíà÷åíèå" << endl << "7 - Ôîðìà" << endl << "8 - Öâåò" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð½Ð°Ð¹Ñ‚Ð¸?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "2 - Ð¦ÐµÐ½Ð°" << endl
+        << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl << "5 - ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»"
+        << endl << "6 - ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ" << endl << "7 - Ð¤Ð¾Ñ€Ð¼Ð°" << endl << "8 - Ð¦Ð²ÐµÑ‚" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -195,15 +195,15 @@ bool SoftToys::search(SoftToys& tmp, int num)
 
 void SoftToys::tableCap()
 {
-    cout << endl << setw(3) << left << " ¹" << "|" << setw(11) << "Íàçâàíèå" << "|" << setw(8) << "Öåíà" << "|" << setw(20) << "Âîçðàñòíàÿ ãðóïïà"
-        << "|" << setw(23) << "Ñòðàíà ïðîèçâîäèòåëü" << "|"  << setw(11) << "Ìàòåðèàë" << "|" << setw(13) << "Íàçíà÷åíèå" 
-        << "|" << setw(12) << "Ôîðìà" << "|" << setw(12) << "Öâåò" << endl;
+    cout << endl << setw(3) << left << " â„–" << "|" << setw(11) << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << "|" << setw(8) << "Ð¦ÐµÐ½Ð°" << "|" << setw(20) << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°"
+        << "|" << setw(23) << "Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << "|" << setw(11) << "ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»" << "|" << setw(13) << "ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ"
+        << "|" << setw(12) << "Ð¤Ð¾Ñ€Ð¼Ð°" << "|" << setw(12) << "Ð¦Ð²ÐµÑ‚" << endl;
     cout << "----------------------------------------------------------------------------------------------------------" << endl;
 }
 
 string SoftToys::getNameOfClass()
 {
-    return SOFTTOYS;
+    return SOFT_TOYS;
 }
 
 string SoftToys::getNameOfMenu()

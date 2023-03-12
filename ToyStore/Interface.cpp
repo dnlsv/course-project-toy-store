@@ -7,33 +7,33 @@ void Interface<T>::menu()
     while (1)
     {
         system("cls");
-        cout << "\tÌÀÃÀÇÈÍ ÈÃÐÓØÅÊ" << endl << endl;
-        cout << "1 - Êîíñòðóêòîðû" << endl << "2 - Ìÿãêèå èãðóøêè" << endl << "3 - Ìàøèíêè" << endl << "4 - Ðîáîòû" << endl << "0 - Âåðíóòüñÿ" << endl;
+        cout << "\tÐœÐÐ“ÐÐ—Ð˜Ð Ð˜Ð“Ð Ð£Ð¨Ð•Ðš" << endl << endl;
+        cout << "1 - ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€Ñ‹" << endl << "2 - ÐœÑÐ³ÐºÐ¸Ðµ Ð¸Ð³Ñ€ÑƒÑˆÐºÐ¸" << endl << "3 - ÐœÐ°ÑˆÐ¸Ð½ÐºÐ¸" << endl << "4 - Ð Ð¾Ð±Ð¾Ñ‚Ñ‹" << endl << "0 - Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ" << endl;
         validationCheck(num);
         switch (num)
         {
         case 1:
         {
-            Interface<Constructors> obj;
-            obj.fun();
+            Interface<Constructors> constructors;
+            constructors.fun();
             break;
         }
         case 2:
         {
-            Interface<SoftToys> obj1;
-            obj1.fun();
+            Interface<SoftToys> soft_toys;
+            soft_toys.fun();
             break;
         }
         case 3:
         {
-            Interface<Cars> obj2;
-            obj2.fun();
+            Interface<Cars> cars;
+            cars.fun();
             break;
         }
         case 4:
         {
-            Interface<Robots> obj3;
-            obj3.fun();
+            Interface<Robots> robots;
+            robots.fun();
             break;
         }
         case 0:
@@ -43,39 +43,39 @@ void Interface<T>::menu()
 }
 
 template<class T>
-void Interface<T>::menuUser()
+void Interface<T>::userMenu()
 {
     int num;
     while (1)
     {
         system("cls");
-        cout << "\tÌÀÃÀÇÈÍ ÈÃÐÓØÅÊ" << endl << endl;
-        cout << "1 - Êîíñòðóêòîðû" << endl << "2 - Ìÿãêèå èãðóøêè" << endl << "3 - Ìàøèíêè" << endl << "4 - Ðîáîòû" << endl << "0 - Âåðíóòüñÿ" << endl;
+        cout << "\tÐœÐÐ“ÐÐ—Ð˜Ð Ð˜Ð“Ð Ð£Ð¨Ð•Ðš" << endl << endl;
+        cout << "1 - ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€Ñ‹" << endl << "2 - ÐœÑÐ³ÐºÐ¸Ðµ Ð¸Ð³Ñ€ÑƒÑˆÐºÐ¸" << endl << "3 - ÐœÐ°ÑˆÐ¸Ð½ÐºÐ¸" << endl << "4 - Ð Ð¾Ð±Ð¾Ñ‚Ñ‹" << endl << "0 - Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ" << endl;
         validationCheck(num);
         switch (num)
         {
         case 1:
         {
-            Interface<Constructors> obj;
-            obj.userFun();
+            Interface<Constructors> constructors;
+            constructors.userFun();
             break;
         }
         case 2:
         {
-            Interface<SoftToys> obj1;
-            obj1.userFun();
+            Interface<SoftToys> soft_toys;
+            soft_toys.userFun();
             break;
         }
         case 3:
         {
-            Interface<Cars> obj2;
-            obj2.userFun();
+            Interface<Cars> cars;
+            cars.userFun();
             break;
         }
         case 4:
         {
-            Interface<Robots> obj3;
-            obj3.userFun();
+            Interface<Robots> robots;
+            robots.userFun();
             break;
         }
         case 0:
@@ -95,8 +95,8 @@ void Interface<T>::fun()
     {
         system("cls");
         cout << T::getNameOfMenu() << endl << endl;
-        cout << "1 - Äîáàâèòü" << endl << "2 - Óäàëèòü" << endl << "3 - Ïðîñìîòð" << endl << "4 - Ðåäàêòèðîâàòü" << endl 
-            << "5 - Ïîèñê" << endl << "0 - Âåðíóòüñÿ" << endl;
+        cout << "1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ" << endl << "2 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ" << endl << "3 - ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€" << endl << "4 - Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ" << endl
+            << "5 - ÐŸÐ¾Ð¸ÑÐº" << endl << "0 - Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ" << endl;
         validationCheck(num);
         switch (num)
         {
@@ -121,7 +121,7 @@ void Interface<T>::fun()
             break;
         }
     }
-        obj.writeToFile();
+    obj.writeToFile();
 }
 
 template <class T>
@@ -136,7 +136,7 @@ void Interface<T>::userFun()
     {
         system("cls");
         cout << T::getNameOfMenu() << endl << endl;
-        cout << "1 - Ïðîñìîòð" << endl  << "2 - Ïîèñê" << endl << "3 - Ïîêóïêà" << endl << "0 - Âåðíóòüñÿ" << endl;
+        cout << "1 - ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€" << endl << "2 - ÐŸÐ¾Ð¸ÑÐº" << endl << "3 - ÐŸÐ¾ÐºÑƒÐ¿ÐºÐ°" << endl << "0 - Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ" << endl;
         validationCheck(num);
         switch (num)
         {
@@ -161,32 +161,32 @@ void Interface<T>::userFun()
 template <class T>
 void Interface<T>::buyElement(List<T>& obj)
 {
-    List<BuyToys> jj;
- 
-    BuyToys bb;
+    List<Purchase> purchases;
+
+    Purchase purchase;
     int n;
     int count = obj.returnCount();
     if (count != 0)
     {
-        jj.readFromFile();
+        purchases.readFromFile();
         int num;
         viewElements(obj);
-        cout << "Ââåäèòå íîìåð èãðóøêè äëÿ ïîêóïêè:" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¸Ð³Ñ€ÑƒÑˆÐºÐ¸ Ð´Ð»Ñ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸:" << endl;
         excessOfLimit(num, obj.returnCount());
         element = obj.getElement(num);
-        bb.name_of_toys = element.getName();
-        cout << "Ââåäèòå êîëè÷åñòâî èãðóøåê äëÿ ïîêóïêè:" << endl;
+        purchase.name_of_toys = element.getName();
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¸Ð³Ñ€ÑƒÑˆÐµÐº Ð´Ð»Ñ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸:" << endl;
         validationCheck(n);
-        bb.amount = n;
-        cout << "Ââåäèòå ñâîé êîíòàêòíûé íîìåð òåëåôîíà:" << endl;
+        purchase.amount = n;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ²Ð¾Ð¹ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð°:" << endl;
         validationCheck(n);
-        bb.number = n;
-        cout << endl << "Èãðóøêà êóïëåíà!" << endl << endl;
-        jj.AddEnd(bb);
-        jj.writeToFile();
+        purchase.phone_number = n;
+        cout << endl << "Ð˜Ð³Ñ€ÑƒÑˆÐºÐ° ÐºÑƒÐ¿Ð»ÐµÐ½Ð°!" << endl << endl;
+        purchases.AddEnd(purchase);
+        purchases.writeToFile();
     }
     else
-        cout << endl << "\tÄàííûõ íåò!" << endl << endl;
+        cout << endl << "\tÐ”Ð°Ð½Ð½Ñ‹Ñ… Ð½ÐµÑ‚!" << endl << endl;
     system("pause");
 }
 
@@ -197,7 +197,7 @@ void Interface<T>::addElement(List<T>& obj)
     validationCheck(element);
     //cin >> element;
     obj.AddEnd(element);
-    cout << endl << "Çàïèñü äîáàâëåíà!" << endl << endl;
+    cout << endl << "Ð—Ð°Ð¿Ð¸ÑÑŒ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð°!" << endl << endl;
     system("pause");
 }
 
@@ -209,13 +209,13 @@ void Interface<T>::deleteElement(List<T>& obj)
     {
         int num;
         viewElements(obj);
-        cout << "Ââåäèòå íîìåð çàïèñè äëÿ óäàëåíèÿ:" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ:" << endl;
         excessOfLimit(num, obj.returnCount());
         obj.Del(num);
-        cout << endl << "Çàïèñü óäàëåíà!" << endl << endl;
+        cout << endl << "Ð—Ð°Ð¿Ð¸ÑÑŒ ÑƒÐ´Ð°Ð»ÐµÐ½Ð°!" << endl << endl;
     }
     else
-        cout << endl << "\tÄàííûõ íåò!" << endl << endl;
+        cout << endl << "\tÐ”Ð°Ð½Ð½Ñ‹Ñ… Ð½ÐµÑ‚!" << endl << endl;
     system("pause");
 }
 
@@ -235,16 +235,16 @@ void Interface<T>::editElement(List<T>& obj)
     {
         int num;
         viewElements(obj);
-        cout << "Ââåäèòå íîìåð çàïèñè äëÿ ðåäàêòèðîâàíèÿ:" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð´Ð»Ñ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ:" << endl;
         excessOfLimit(num, obj.returnCount());
         element = obj.getElement(num);
         element.edit();
         obj.Del(num);
         obj.Insert(num, element);
-        cout << endl << "Çàïèñü îòðåäàêòèðîâàíà!" << endl << endl;
+        cout << endl << "Ð—Ð°Ð¿Ð¸ÑÑŒ Ð¾Ñ‚Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð°!" << endl << endl;
     }
     else
-        cout << endl << "\tÄàííûõ íåò!" << endl << endl;
+        cout << endl << "\tÐ”Ð°Ð½Ð½Ñ‹Ñ… Ð½ÐµÑ‚!" << endl << endl;
     system("pause");
 }
 
@@ -262,7 +262,7 @@ void Interface<T>::searchElement(List<T>& obj)
             cout << " " << setw(2) << left << ++j << "|" << element;
     }
     if (j == 0)
-        cout << endl << "\tÍè÷åãî íå íàéäåíî" << endl << endl;
+        cout << endl << "\tÐÐ¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾" << endl << endl;
     else
         cout << endl;
     system("pause");
@@ -276,8 +276,8 @@ void Interface<T>::administratorMenu()
     while (1)
     {
         system("cls");
-        cout << "\tÌÎÄÓËÜ ÀÄÌÈÍÈÑÒÐÀÒÎÐÀ" << endl << endl;
-        cout << "1 - Ðàáîòà ñ ó÷åòíûìè çàïèñÿìè" << endl << "2 - Ðàáîòà ñ äàííûìè" << endl << "0 - Âûõîä" << endl;
+        cout << "\tÐœÐžÐ”Ð£Ð›Ð¬ ÐÐ”ÐœÐ˜ÐÐ˜Ð¡Ð¢Ð ÐÐ¢ÐžÐ Ð" << endl << endl;
+        cout << "1 - Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ ÑƒÑ‡ÐµÑ‚Ð½Ñ‹Ð¼Ð¸ Ð·Ð°Ð¿Ð¸ÑÑÐ¼Ð¸" << endl << "2 - Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼Ð¸" << endl << "0 - Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
         validationCheck(num);
         switch (num)
         {
@@ -300,9 +300,9 @@ void Interface<T>::selectionMenu()
     {
         element.firstAdmin();
         system("cls");
-        cout << "\tÂÕÎÄ Â ÏÐÎÃÐÀÌÌÓ" << endl << endl;
+        cout << "\tÐ’Ð¥ÐžÐ” Ð’ ÐŸÐ ÐžÐ“Ð ÐÐœÐœÐ£" << endl << endl;
         int num;
-        cout << "1 - Àâòîðèçàöèÿ" << endl << "2 - Ðåãèñòðàöèÿ" << endl << endl << "0 - Âûõîä" << endl;
+        cout << "1 - ÐÐ²Ñ‚Ð¾Ñ€Ð¸Ð·Ð°Ñ†Ð¸Ñ" << endl << "2 - Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ" << endl << endl << "0 - Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
         validationCheck(num);
         switch (num)
         {

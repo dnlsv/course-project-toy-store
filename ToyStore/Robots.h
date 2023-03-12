@@ -1,30 +1,31 @@
 #pragma once
+
 #include "ElectronicToys.h"
 
 const string ROBOTS = "Robots";
-const string MODYL_OF_ROBOTS = "\tРОБОТЫ";
+const string MODYL_OF_ROBOTS = "\tР РћР‘РћРўР«";
 
 class Robots :public ElectronicToys
 {
 private:
-    string sensors; //датчики
-    string character; //персонаж(вид робота)
+    string sensors; //РґР°С‚С‡РёРєРё
+    string character; //РїРµСЂСЃРѕРЅР°Р¶(РІРёРґ СЂРѕР±РѕС‚Р°)
 public:
-    Robots(); //конструктор без параметров
-    ~Robots() {}; //деструктор без параметров
-    Robots(const Robots& ob); //конструктор копирования
-    void setSensors(string buf); //метод, устанавливающий значение поля sensors
-    string getSensors(); //метод, возвращающий значение поля sensors
-    void setCharacter(string buf); //метод, устанавливающий значение поля character
-    string getCharacter(); //метод, возвращающий значение поля character
-    friend istream& operator >> (istream& in, Robots& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, Robots& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, Robots& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, Robots& obj); //перегрузка оператора вывода для файла
-    void edit(); //редактирование всех полей объекта
-    bool search(Robots&, int num); //поиск по полям объекта
-    Robots& inputSearchField(int& num); //ввод поля для поиска
-    void tableCap(); //вывод на экран шапки таблицы
-    static string getNameOfClass(); //метод, возвращающий имя класса
-    static string getNameOfMenu(); //метод, возвращающий название меню
+    Robots(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~Robots() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    Robots(const Robots& ob); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+    void setSensors(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ sensors
+    string getSensors(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ sensors
+    void setCharacter(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ character
+    string getCharacter(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ character
+    friend istream& operator >> (istream& in, Robots& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, Robots& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, Robots& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, Robots& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    void edit(); //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІСЃРµС… РїРѕР»РµР№ РѕР±СЉРµРєС‚Р°
+    bool search(Robots&, int num); //РїРѕРёСЃРє РїРѕ РїРѕР»СЏРј РѕР±СЉРµРєС‚Р°
+    Robots& inputSearchField(int& num); //РІРІРѕРґ РїРѕР»СЏ РґР»СЏ РїРѕРёСЃРєР°
+    void tableCap(); //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ С€Р°РїРєРё С‚Р°Р±Р»РёС†С‹
+    static string getNameOfClass(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РёРјСЏ РєР»Р°СЃСЃР°
+    static string getNameOfMenu(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅР°Р·РІР°РЅРёРµ РјРµРЅСЋ
 };

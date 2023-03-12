@@ -1,10 +1,11 @@
 #pragma once
+
 #include "List.cpp"
 #include "Constructors.h"
 #include "Cars.h"
 #include "Robots.h"
 #include "SoftToys.h"
-#include "BuyToys.h"
+#include "Purchase.h"
 
 template <class T>
 class Interface
@@ -12,18 +13,18 @@ class Interface
 private:
     T element;
 public:
-    Interface() {}; //конструктор без параметров
-    ~Interface() {}; //деструктор без параметров
-    void menu(); //меню выбора данных для работы с ними
-    void fun(); //меню работы с данными выбранного типа
-    void menuUser(); //меню выбора данных пользователя для работы с ними
-    void userFun(); //меню работы с данными выбранного типа для пользователя
-    void addElement(List<T>& obj); //добавление элемента
-    void deleteElement(List<T>& obj); //удаление елемента
-    void viewElements(List<T>& obj); //просмотр таблицы элементов
-    void editElement(List<T>& obj); //редактирование елемента
-    void searchElement(List<T>& obj); //поиск элемента
-    void buyElement(List<T>& obj); //покупка элемента
-    void selectionMenu(); //меню выбора между авторизацией и регистрацией
-    void administratorMenu(); //меню администратора для выбора данных, с которыми он будет работать
+    Interface() {}; //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~Interface() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    void menu(); //РјРµРЅСЋ РІС‹Р±РѕСЂР° РґР°РЅРЅС‹С… РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РЅРёРјРё
+    void fun(); //РјРµРЅСЋ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё РІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚РёРїР°
+    void userMenu(); //РјРµРЅСЋ РІС‹Р±РѕСЂР° РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РЅРёРјРё
+    void userFun(); //РјРµРЅСЋ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё РІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚РёРїР° РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+    void addElement(List<T>& obj); //РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
+    void deleteElement(List<T>& obj); //СѓРґР°Р»РµРЅРёРµ РµР»РµРјРµРЅС‚Р°
+    void viewElements(List<T>& obj); //РїСЂРѕСЃРјРѕС‚СЂ С‚Р°Р±Р»РёС†С‹ СЌР»РµРјРµРЅС‚РѕРІ
+    void editElement(List<T>& obj); //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РµР»РµРјРµРЅС‚Р°
+    void searchElement(List<T>& obj); //РїРѕРёСЃРє СЌР»РµРјРµРЅС‚Р°
+    void buyElement(List<T>& obj); //РїРѕРєСѓРїРєР° СЌР»РµРјРµРЅС‚Р°
+    void selectionMenu(); //РјРµРЅСЋ РІС‹Р±РѕСЂР° РјРµР¶РґСѓ Р°РІС‚РѕСЂРёР·Р°С†РёРµР№ Рё СЂРµРіРёСЃС‚СЂР°С†РёРµР№
+    void administratorMenu(); //РјРµРЅСЋ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° РґР»СЏ РІС‹Р±РѕСЂР° РґР°РЅРЅС‹С…, СЃ РєРѕС‚РѕСЂС‹РјРё РѕРЅ Р±СѓРґРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ
 };

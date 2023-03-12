@@ -1,20 +1,21 @@
 #pragma once
+
 #include "Toys.h"
 
 class SimpleToys :public Toys
 {
 protected:
-    string material; //материал
-    string purpose; //назначение
+    string material; //РјР°С‚РµСЂРёР°Р»
+    string purpose; //РЅР°Р·РЅР°С‡РµРЅРёРµ
 public:
-    SimpleToys(); //конструктор без параметров
-    ~SimpleToys() {}; //деструктор без параметров
-    void setMaterial(string buf); //метод, устанавливающий значение поля material
-    string getMaterial(); //метод, возвращающий значение поля material
-    void setPurpose(string buf); //метод, устанавливающий значение поля purpose
-    string getPurpose(); //метод, возвращающий значение поля purpose
-    friend istream& operator >> (istream& in, SimpleToys& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, SimpleToys& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, SimpleToys& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, SimpleToys& obj); //перегрузка оператора вывода для файла
+    SimpleToys(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~SimpleToys() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    void setMaterial(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ material
+    string getMaterial(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ material
+    void setPurpose(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ purpose
+    string getPurpose(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ purpose
+    friend istream& operator >> (istream& in, SimpleToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, SimpleToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, SimpleToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, SimpleToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
 };

@@ -1,107 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
+    <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
+    <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Toys.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SimpleToys.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ElectronicToys.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Constructors.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cars.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Robots.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Users.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SoftToys.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="List.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Interface.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entry.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Validation.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BuyToys.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Purchase.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cars.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Constructors.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ElectronicToys.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Robots.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleToys.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Users.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SoftToys.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Interface.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Toys.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Entry.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Validation.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BuyToys.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Purchase.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd">
-      <Filter>Файлы ресурсов</Filter>
+    <None Include="..\Resources\ClassDiagram.cd">
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

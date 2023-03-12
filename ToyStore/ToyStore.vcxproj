@@ -137,7 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BuyToys.h" />
+    <ClInclude Include="Purchase.h" />
     <ClInclude Include="Cars.h" />
     <ClInclude Include="Constructors.h" />
     <ClInclude Include="ElectronicToys.h" />
@@ -152,7 +152,7 @@
     <ClInclude Include="Validation.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BuyToys.cpp" />
+    <ClCompile Include="Purchase.cpp" />
     <ClCompile Include="Cars.cpp" />
     <ClCompile Include="Constructors.cpp" />
     <ClCompile Include="ElectronicToys.cpp" />
@@ -168,7 +168,7 @@
     <ClCompile Include="Validation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="..\Resources\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,30 +1,31 @@
 #pragma once
+
 #include "SimpleToys.h"
 
-const string SOFTTOYS = "SoftToys";
-const string MODYL_OF_SOFTTOYS = "\tМЯГКИЕ ИГРУШКИ";
+const string SOFT_TOYS = "SoftToys";
+const string MODYL_OF_SOFTTOYS = "\tРњРЇР“РљРР• РР“Р РЈРЁРљР";
 
 class SoftToys :public SimpleToys
 {
 private:
-    string form; //форма
-    string color; //цвет
+    string form; //С„РѕСЂРјР°
+    string color; //С†РІРµС‚
 public:
-    SoftToys(); //конструктор без параметров
-    ~SoftToys() {}; //деструктор без параметров
-    SoftToys(const SoftToys& ob); //конструктор копирования
-    void setForm(string buf); //метод, устанавливающий значение поля form
-    string getForm(); //метод, возвращающий значение поля form
-    void setColor(string buf); //метод, устанавливающий значение поля color
-    string getColor(); //метод, возвращающий значение поля color
-    friend istream& operator >> (istream& in, SoftToys& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, SoftToys& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, SoftToys& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, SoftToys& obj); //перегрузка оператора вывода для файла
-    void edit(); //редактирование всех полей объекта  
-    bool search(SoftToys&, int num); //поиск по полям объекта
-    SoftToys& inputSearchField(int& num); //ввод поля для поиска
-    void tableCap(); //вывод на экран шапки таблицы
-    static string getNameOfClass(); //метод, возвращающий имя класса
-    static string getNameOfMenu(); //метод, возвращающий название меню
+    SoftToys(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~SoftToys() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    SoftToys(const SoftToys& ob); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+    void setForm(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ form
+    string getForm(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ form
+    void setColor(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ color
+    string getColor(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ color
+    friend istream& operator >> (istream& in, SoftToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, SoftToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, SoftToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, SoftToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    void edit(); //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІСЃРµС… РїРѕР»РµР№ РѕР±СЉРµРєС‚Р°  
+    bool search(SoftToys&, int num); //РїРѕРёСЃРє РїРѕ РїРѕР»СЏРј РѕР±СЉРµРєС‚Р°
+    SoftToys& inputSearchField(int& num); //РІРІРѕРґ РїРѕР»СЏ РґР»СЏ РїРѕРёСЃРєР°
+    void tableCap(); //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ С€Р°РїРєРё С‚Р°Р±Р»РёС†С‹
+    static string getNameOfClass(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РёРјСЏ РєР»Р°СЃСЃР°
+    static string getNameOfMenu(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅР°Р·РІР°РЅРёРµ РјРµРЅСЋ
 };

@@ -1,6 +1,6 @@
 #include "Cars.h"
 
-Cars::Cars() 
+Cars::Cars()
 {
     type_of_car = "";
     body_color = "";
@@ -41,10 +41,10 @@ string Cars::getBodyColor()
 istream& operator >> (istream& in, Cars& obj)
 {
     in >> dynamic_cast<ElectronicToys&>(obj);
-    cout << "Òèï àâòî:" << endl;
+    cout << "Ð¢Ð¸Ð¿ Ð°Ð²Ñ‚Ð¾:" << endl;
     validationCheckStr(in, obj.type_of_car);
     //in >> obj.type_of_car;
-    cout << "Öâåò êîðïóñà:" << endl;
+    cout << "Ð¦Ð²ÐµÑ‚ ÐºÐ¾Ñ€Ð¿ÑƒÑÐ°:" << endl;
     validationCheckStr(in, obj.body_color);
     //in >> obj.body_color;
     return in;
@@ -74,11 +74,11 @@ ofstream& operator << (ofstream& fout, Cars& obj)
 void Cars::edit()
 {
     int num;
-    cout << endl << "\tÊàêèå äàííûå èçìåíèòü?" << endl << endl << "1 - Íàçâàíèå" << endl << "2 - Öåíà" << endl << "3 - Âîçðàñòíàÿ ãðóïïà"
-        << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl << "5 - Ìàñøòàá" << endl << "6 - Åìêîñòü àêêóìóëÿòîðà"
-        << endl << "7 - Òèï àâòî" << endl << "8 - Öâåò êîðïóñà" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "2 - Ð¦ÐµÐ½Ð°" << endl << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°"
+        << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl << "5 - ÐœÐ°ÑÑˆÑ‚Ð°Ð±" << endl << "6 - Ð•Ð¼ÐºÐ¾ÑÑ‚ÑŒ Ð°ÐºÐºÑƒÐ¼ÑƒÐ»ÑÑ‚Ð¾Ñ€Ð°"
+        << endl << "7 - Ð¢Ð¸Ð¿ Ð°Ð²Ñ‚Ð¾" << endl << "8 - Ð¦Ð²ÐµÑ‚ ÐºÐ¾Ñ€Ð¿ÑƒÑÐ°" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå íîâûå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -110,11 +110,11 @@ void Cars::edit()
 
 Cars& Cars::inputSearchField(int& num)
 {
-    cout << endl << "\tÊàêèå äàííûå íàéòè?" << endl << endl << "1 - Íàçâàíèå" << endl << "2 - Öåíà" << endl << "3 - Âîçðàñòíàÿ ãðóïïà"
-        << endl << "4 - Ñòðàíà ïðîèçâîäèòåëü" << endl << "5 - Ìàñøòàá" << endl << "6 - Åìêîñòü àêêóìóëÿòîðà"
-        << endl << "7 - Òèï àâòî" << endl << "8 - Öâåò êîðïóñà" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð½Ð°Ð¹Ñ‚Ð¸?" << endl << endl << "1 - ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << endl << "2 - Ð¦ÐµÐ½Ð°" << endl << "3 - Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°"
+        << endl << "4 - Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << endl << "5 - ÐœÐ°ÑÑˆÑ‚Ð°Ð±" << endl << "6 - Ð•Ð¼ÐºÐ¾ÑÑ‚ÑŒ Ð°ÐºÐºÑƒÐ¼ÑƒÐ»ÑÑ‚Ð¾Ñ€Ð°"
+        << endl << "7 - Ð¢Ð¸Ð¿ Ð°Ð²Ñ‚Ð¾" << endl << "8 - Ð¦Ð²ÐµÑ‚ ÐºÐ¾Ñ€Ð¿ÑƒÑÐ°" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -142,7 +142,7 @@ Cars& Cars::inputSearchField(int& num)
         validationCheck(this->body_color);
         break;
     }
-    return* this;
+    return*this;
 }
 
 bool Cars::search(Cars& tmp, int num)
@@ -169,7 +169,7 @@ bool Cars::search(Cars& tmp, int num)
             return true;
         else
             break;
-    case 5:       
+    case 5:
         if (this->scale == tmp.scale)
             return true;
         else
@@ -195,11 +195,11 @@ bool Cars::search(Cars& tmp, int num)
 
 void Cars::tableCap()
 {
-    cout << endl << setw(3) << left << " ¹" << "|" << setw(11) << "Íàçâàíèå" << "|" << setw(8) << "Öåíà" << "|"
-        << setw(20) << "Âîçðàñòíàÿ ãðóïïà" << "|" << setw(23) << "Ñòðàíà ïðîèçâîäèòåëü" << "|" 
-        << setw(10) << "Ìàñøòàá" << "|" << setw(18) << "Åìêîñòü áàòàðåè" << "|" 
-        << setw(11) << "Òèï àâòî" << "|" << setw(15)  << "Öâåò êîðïóñà" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------------"<< endl;
+    cout << endl << setw(3) << left << " â„–" << "|" << setw(11) << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ" << "|" << setw(8) << "Ð¦ÐµÐ½Ð°" << "|"
+        << setw(20) << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð½Ð°Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð°" << "|" << setw(23) << "Ð¡Ñ‚Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ" << "|"
+        << setw(10) << "ÐœÐ°ÑÑˆÑ‚Ð°Ð±" << "|" << setw(18) << "Ð•Ð¼ÐºÐ¾ÑÑ‚ÑŒ Ð±Ð°Ñ‚Ð°Ñ€ÐµÐ¸" << "|"
+        << setw(11) << "Ð¢Ð¸Ð¿ Ð°Ð²Ñ‚Ð¾" << "|" << setw(15) << "Ð¦Ð²ÐµÑ‚ ÐºÐ¾Ñ€Ð¿ÑƒÑÐ°" << endl;
+    cout << "--------------------------------------------------------------------------------------------------------------------" << endl;
 }
 
 string Cars::getNameOfClass()
@@ -211,4 +211,3 @@ string Cars::getNameOfMenu()
 {
     return MODYL_OF_CARS;
 }
-

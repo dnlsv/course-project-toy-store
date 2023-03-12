@@ -81,7 +81,7 @@ void List<T>::View()
         }
     }
     else
-        cout << endl << "\tДанных нет!" << endl;
+        cout << endl << "\tР”Р°РЅРЅС‹С… РЅРµС‚!" << endl;
 }
 
 template <class T>
@@ -111,8 +111,8 @@ template <class T>
 void List<T>::readFromFile()
 {
     T element;
-    string Way = "D://My//University//ООП//3Sem//Курсовой проект//FileOf" + T::getNameOfClass() + ".txt";
-    ifstream fin(Way, ios::in); 
+    string Way = "..\\Resources\\FileOf" + T::getNameOfClass() + ".txt";
+    ifstream fin(Way, ios::in);
     if ((int)fin.eof() != fin.peek() + 1)
     {
         while (!fin.eof())
@@ -121,15 +121,15 @@ void List<T>::readFromFile()
             this->AddEnd(element);
         }
     }
-    fin.close(); 
+    fin.close();
 }
 
 template <class T>
 void List<T>::writeToFile()
 {
-    string Way = "D://My//University//ООП//3Sem//Курсовой проект//FileOf" + T::getNameOfClass() + ".txt";
+    string Way = "..\\Resources\\FileOf" + T::getNameOfClass() + ".txt";
     int i = 0;
-    ofstream fout(Way, ios::out); 
+    ofstream fout(Way, ios::out);
     Spis2<T>* temp = begin;
     while (temp != 0)
     {

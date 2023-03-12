@@ -10,7 +10,7 @@ void validationCheck(T& temp)
         else {
             cin.clear();
             cin.ignore(256, '\n');
-            cout << endl << "Íåêîððåêòíûé ââîä!" << endl << endl;
+            cout << endl << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!" << endl << endl;
         }
     }
 }
@@ -25,7 +25,7 @@ void excessOfLimit(T& temp, int count)
         if (temp > 0 && temp <= count)
             break;
         else
-            cout << endl << "Íåêîððåêòíûé ââîä!" << endl << endl;
+            cout << endl << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!" << endl << endl;
     }
 }
 
@@ -39,7 +39,7 @@ void validationCheckField(istream& in, T& temp)
         else {
             in.clear();
             in.ignore(256, '\n');
-            cout << endl << "Íåêîððåêòíûé ââîä!" << endl << endl;
+            cout << endl << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!" << endl << endl;
         }
     }
 }
@@ -53,12 +53,12 @@ void validationCheckStr(istream& in, T& temp)
         in >> temp;
         for (int i = 0; i < temp.length(); i++)
         {
-            if (temp[i] >= 'à' && temp[i] <= 'ÿ' || temp[i] >= 'À' && temp[i] <= 'ß')
+            if (temp[i] >= 'a' && temp[i] <= 'z' || temp[i] >= 'A' && temp[i] <= 'Z')
                 count++;
         }
         if (count == temp.length())
             break;
         else
-            cout << endl << "Íåêîððåêòíûé ââîä!" << endl << endl;
+            cout << endl << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!" << endl << endl;
     }
 }

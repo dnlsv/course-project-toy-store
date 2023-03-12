@@ -47,16 +47,16 @@ istream& operator >> (istream& in, Users& obj)
 {
     while (1)
     {
-        cout << "Ââåäèòå" << endl << endl << "Ëîãèí: ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ" << endl << endl << "Ð›Ð¾Ð³Ð¸Ð½: ";
         in >> obj.login;
-        cout << "Ïàðîëü: ";
+        cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ: ";
         in >> obj.password;
-        cout << "Ðîëü: ";
+        cout << "Ð Ð¾Ð»ÑŒ: ";
         in >> obj.role;
         if (obj.uniqueLogin(obj) == true)
             break;
         else
-            cout << endl << "Òàêîé ëîãèí óæå ñóùåñòâóåò! Ââåäèòå äðóãîé" << endl << endl;
+            cout << endl << "Ð¢Ð°ÐºÐ¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚! Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹" << endl << endl;
     }
     return in;
 }
@@ -81,18 +81,18 @@ ofstream& operator << (ofstream& fout, Users& obj)
 
 void Users::inputUserData()
 {
-    cout << endl << "Ââåäèòå" << endl << endl << "Ëîãèí: ";
+    cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ" << endl << endl << "Ð›Ð¾Ð³Ð¸Ð½: ";
     cin >> login;
-    cout << "Ïàðîëü: ";
+    cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ: ";
     cin >> password;
 }
 
 void Users::edit()
 {
     int num;
-    cout << endl << "\tÊàêèå äàííûå èçìåíèòü?" << endl << endl << "1 - Ëîãèí" << endl << "2 - Ïàðîëü" << endl << "3 - Ðîëü" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ?" << endl << endl << "1 - Ð›Ð¾Ð³Ð¸Ð½" << endl << "2 - ÐŸÐ°Ñ€Ð¾Ð»ÑŒ" << endl << "3 - Ð Ð¾Ð»ÑŒ" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå íîâûå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -109,9 +109,9 @@ void Users::edit()
 
 Users& Users::inputSearchField(int& num)
 {
-    cout << endl << "\tÊàêèå äàííûå íàéòè?" << endl << endl << "1 - Ëîãèí" << endl << "2 - Ïàðîëü" << endl << "3 - Ðîëü" << endl;
+    cout << endl << "\tÐšÐ°ÐºÐ¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð½Ð°Ð¹Ñ‚Ð¸?" << endl << endl << "1 - Ð›Ð¾Ð³Ð¸Ð½" << endl << "2 - ÐŸÐ°Ñ€Ð¾Ð»ÑŒ" << endl << "3 - Ð Ð¾Ð»ÑŒ" << endl;
     cin >> num;
-    cout << endl << "\tÂâåäèòå äàííûå" << endl << endl;
+    cout << endl << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ" << endl << endl;
     switch (num)
     {
     case 1:
@@ -152,7 +152,7 @@ bool Users::search(Users& tmp, int num)
 
 void Users::tableCap()
 {
-    cout << endl << setw(3) << left << " ¹" << "|" << setw(12) << "Ëîãèí" << "|" << setw(12) << "Ïàðîëü" << "|" << setw(12) << "Ðîëü" << endl;
+    cout << endl << setw(3) << left << " â„–" << "|" << setw(12) << "Ð›Ð¾Ð³Ð¸Ð½" << "|" << setw(12) << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ" << "|" << setw(12) << "Ð Ð¾Ð»ÑŒ" << endl;
     cout << "-----------------------------------" << endl;
 }
 

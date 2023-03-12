@@ -1,20 +1,21 @@
 #pragma once
+
 #include "Toys.h"
 
 class ElectronicToys :public Toys
 {
 protected:
-    int scale; //масштаб
-    int battery_capacity; //емкость батареи
+    int scale; //РјР°СЃС€С‚Р°Р±
+    int battery_capacity; //РµРјРєРѕСЃС‚СЊ Р±Р°С‚Р°СЂРµРё
 public:
-    ElectronicToys(); //конструктор без параметров
-    ~ElectronicToys() {}; //деструктор без параметров
-    void setScale(int buf); //метод, устанавливающий значение поля scale
-    int getScale(); //метод, возвращающий значение поля scale
-    void setBatteryCapacity(int buf); //метод, устанавливающий значение поля battery_capacity
-    int getBatteryCapacity(); //метод, возвращающий значение поля battery_capacity
-    friend istream& operator >> (istream& in, ElectronicToys& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, ElectronicToys& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, ElectronicToys& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, ElectronicToys& obj); //перегрузка оператора вывода для файла
+    ElectronicToys(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~ElectronicToys() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    void setScale(int buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ scale
+    int getScale(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ scale
+    void setBatteryCapacity(int buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ battery_capacity
+    int getBatteryCapacity(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ battery_capacity
+    friend istream& operator >> (istream& in, ElectronicToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, ElectronicToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, ElectronicToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, ElectronicToys& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
 };

@@ -1,14 +1,15 @@
 #pragma once
+
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
 template <class T>
-void validationCheck(T& temp); //проверка вводимых данных на совпадение с заявленным типом
+void validationCheck(T& temp); //РїСЂРѕРІРµСЂРєР° РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С… РЅР° СЃРѕРІРїР°РґРµРЅРёРµ СЃ Р·Р°СЏРІР»РµРЅРЅС‹Рј С‚РёРїРѕРј
 
 template <class T>
-void excessOfLimit(T& temp, int count); //проверка вводимых данных на выход за пределы
+void excessOfLimit(T& temp, int count); //РїСЂРѕРІРµСЂРєР° РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С… РЅР° РІС‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹
 
 template <class T>
 void validationCheckField(istream& in, T& temp);

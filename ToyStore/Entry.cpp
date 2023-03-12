@@ -2,16 +2,16 @@
 
 void Entry::authorization()
 {
-    cout << "\tÀÂÒÎÐÈÇÀÖÈß" << endl << endl;
+    cout << "\tÐÐ’Ð¢ÐžÐ Ð˜Ð—ÐÐ¦Ð˜Ð¯" << endl << endl;
     Interface<Users> obj;
     List<Users> tmp;
     Users element;
     string log, pas;
     bool flag = false;
 
-    cout << "Ëîãèí: ";
+    cout << "Ð›Ð¾Ð³Ð¸Ð½: ";
     cin >> log;
-    cout << endl << "Ïàðîëü: ";
+    cout << endl << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ: ";
     pas = maskingPassword();
 
     tmp.readFromFile();
@@ -25,14 +25,14 @@ void Entry::authorization()
         }
         if (log == element.getLogin() && pas == element.getPassword() && element.getRole() == 0)
         {
-            obj.menuUser();
+            obj.userMenu();
             flag = true;
         }
     }
 
     if (flag == false)
     {
-        cout << endl << endl << "Íåâåðíûé ëîãèí èëè ïàðîëü!" << endl << endl;
+        cout << endl << endl << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð»Ð¾Ð³Ð¸Ð½ Ð¸Ð»Ð¸ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ!" << endl << endl;
         system("pause");
     }
 }
@@ -63,7 +63,7 @@ void Entry::firstAdmin()
 
 void Entry::registration()
 {
-    cout << "\tÐÅÃÈÑÒÐÀÖÈß" << endl;
+    cout << "\tÐ Ð•Ð“Ð˜Ð¡Ð¢Ð ÐÐ¦Ð˜Ð¯" << endl;
     Interface<Users> obj;
     List<Users> tmp;
     Users element;
@@ -75,11 +75,11 @@ void Entry::registration()
         if (element.uniqueLogin(element) == true)
             break;
         else
-            cout << endl << "Òàêîé ëîãèí óæå ñóùåñòâóåò! Ââåäèòå äðóãîé" << endl << endl;
+            cout << endl << "Ð¢Ð°ÐºÐ¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚! Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹" << endl << endl;
     }
     tmp.AddEnd(element);
     tmp.writeToFile();
-    cout << endl << "Ó÷åòíàÿ çàïèñü çàðåãèñòðèðîâàíà!" << endl << endl;
+    cout << endl << "Ð£Ñ‡ÐµÑ‚Ð½Ð°Ñ Ð·Ð°Ð¿Ð¸ÑÑŒ Ð·Ð°Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð°!" << endl << endl;
     system("pause");
 }
 
@@ -88,7 +88,7 @@ string Entry::maskingPassword()
     string pas;
     char c;
     int j = 0;
-    char* arr = new char[RESERVESIZE];
+    char* arr = new char[RESERVED_SIZE];
 
     while ((c = _getch()) != '\r')
     {

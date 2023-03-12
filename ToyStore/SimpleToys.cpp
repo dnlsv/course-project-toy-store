@@ -29,10 +29,10 @@ string SimpleToys::getPurpose()
 istream& operator >> (istream& in, SimpleToys& obj)
 {
     in >> dynamic_cast<Toys&>(obj);
-    cout << "Ìàòåðèàë:" << endl;
+    cout << "ÐœÐ°Ñ‚ÐµÑ€Ð¸Ð°Ð»:" << endl;
     validationCheckStr(in, obj.material);
     //in >> obj.material;
-    cout << "Íàçíà÷åíèå:" << endl;
+    cout << "ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:" << endl;
     validationCheckStr(in, obj.purpose);
     //in >> obj.purpose;
     return in;
@@ -41,7 +41,7 @@ istream& operator >> (istream& in, SimpleToys& obj)
 ostream& operator << (ostream& out, SimpleToys& obj)
 {
     out << dynamic_cast <Toys&>(obj);
-    out << setw(11 ) << obj.material << "|" << setw(13) << obj.purpose << "|";
+    out << setw(11) << obj.material << "|" << setw(13) << obj.purpose << "|";
     return out;
 }
 

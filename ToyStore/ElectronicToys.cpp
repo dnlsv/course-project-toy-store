@@ -29,10 +29,10 @@ int ElectronicToys::getBatteryCapacity()
 istream& operator >> (istream& in, ElectronicToys& obj)
 {
     in >> dynamic_cast<Toys&>(obj);
-    cout << "Ìàñøòàá:" << endl;
+    cout << "ÐœÐ°ÑÑˆÑ‚Ð°Ð±:" << endl;
     validationCheckField(in, obj.scale);
     //in >> obj.scale;
-    cout << "Åìêîñòü áàòàðåè:" << endl;
+    cout << "Ð•Ð¼ÐºÐ¾ÑÑ‚ÑŒ Ð±Ð°Ñ‚Ð°Ñ€ÐµÐ¸:" << endl;
     validationCheckField(in, obj.battery_capacity);
     //in >> obj.battery_capacity;
     return in;

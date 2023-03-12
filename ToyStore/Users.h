@@ -1,37 +1,38 @@
 #pragma once
+
 #include "Interface.cpp"
 
 using namespace std;
 
 const string USERS = "Users";
-const string MODYL_OF_ACCOUNTS = "\tМОДУЛЬ УЧЕТНЫХ ЗАПИСЕЙ";
+const string MODYL_OF_ACCOUNTS = "\tРњРћР”РЈР›Р¬ РЈР§Р•РўРќР«РҐ Р—РђРџРРЎР•Р™";
 
 class Users
 {
 private:
-    string login; //логин
-    string password; //пароль
-    bool role; //роль
+    string login; //Р»РѕРіРёРЅ
+    string password; //РїР°СЂРѕР»СЊ
+    bool role; //СЂРѕР»СЊ
 public:
-    Users(); //конструктор без параметров
-    ~Users() {}; //деструктор без параметров
-    Users(const Users& ob); //конструктор копирования
-    void setLogin(string buf); //метод, устанавливающий значение поля login
-    string getLogin(); //метод, возвращающий значение поля login
-    void setPassword(string buf); //метод, устанавливающий значение поля password
-    string getPassword(); //метод, возвращающий значение поля password
-    void setRole(bool buf); //метод, устанавливающий значение поля role
-    bool getRole(); //метод, возвращающий значение поля role
-    friend istream& operator >> (istream& in, Users& obj); //перегрузка оператора ввода
-    friend ostream& operator << (ostream& out, Users& obj); //перегрузка оператора вывода 
-    friend ifstream& operator >> (ifstream& fin, Users& obj); //перегрузка оператора ввода для файла
-    friend ofstream& operator << (ofstream& fout, Users& obj); //перегрузка оператора вывода для файла
-    void inputUserData(); //ввод данных для пользователя
-    void edit(); //редактирование всех полей объекта  
-    bool search(Users&, int num); //поиск по полям объекта
-    Users& inputSearchField(int& num); //ввод поля для поиска
-    void tableCap(); //вывод на экран шапки таблицы
-    static string getNameOfClass(); //метод, возвращающий имя класса
-    static string getNameOfMenu(); //метод, возвращающий название меню
-    bool uniqueLogin(Users); //метод, проверящий уникальность логина
+    Users(); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    ~Users() {}; //РґРµСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    Users(const Users& ob); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+    void setLogin(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ login
+    string getLogin(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ login
+    void setPassword(string buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ password
+    string getPassword(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ password
+    void setRole(bool buf); //РјРµС‚РѕРґ, СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ role
+    bool getRole(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ role
+    friend istream& operator >> (istream& in, Users& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
+    friend ostream& operator << (ostream& out, Users& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° 
+    friend ifstream& operator >> (ifstream& fin, Users& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    friend ofstream& operator << (ofstream& fout, Users& obj); //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РґР»СЏ С„Р°Р№Р»Р°
+    void inputUserData(); //РІРІРѕРґ РґР°РЅРЅС‹С… РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+    void edit(); //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІСЃРµС… РїРѕР»РµР№ РѕР±СЉРµРєС‚Р°  
+    bool search(Users&, int num); //РїРѕРёСЃРє РїРѕ РїРѕР»СЏРј РѕР±СЉРµРєС‚Р°
+    Users& inputSearchField(int& num); //РІРІРѕРґ РїРѕР»СЏ РґР»СЏ РїРѕРёСЃРєР°
+    void tableCap(); //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ С€Р°РїРєРё С‚Р°Р±Р»РёС†С‹
+    static string getNameOfClass(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РёРјСЏ РєР»Р°СЃСЃР°
+    static string getNameOfMenu(); //РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅР°Р·РІР°РЅРёРµ РјРµРЅСЋ
+    bool uniqueLogin(Users); //РјРµС‚РѕРґ, РїСЂРѕРІРµСЂСЏС‰РёР№ СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚СЊ Р»РѕРіРёРЅР°
 };
